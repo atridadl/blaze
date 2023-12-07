@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uzJ8JYphy5qHIebFs5KuOZQ+e1WBzPAfjyuUy8RmvQ7I3k70SgYuUpbo1Z7TTU6VTFWqtb/zcurbjVrbFaPPwQ==",
+  "dgSpecHash": "xlcPKpYcPz+6QE5HFrSWSk4ZGbh9d0Z773cIFztMe6ds+vnQThLzEzeHJSNrkQFlmcRzT7IMimEfzRRfk+tDhg==",
   "success": true,
-  "projectFilePath": "/Users/atridad/Developer/GitHub/blazor-test/BlazorTest.csproj",
+  "projectFilePath": "/Users/atridad/Developer/GitHub/blazor-test/BlazeIt.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

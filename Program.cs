@@ -1,4 +1,4 @@
-using BlazorTest.Components;
+using BlazeIt.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 

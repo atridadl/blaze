@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "/Users/atridad/Developer/GitHub/blazor-test/obj/Debug/net8.0/scopedcss/projectbundle/BlazorTest.bundle.scp.css",
-      "PackagePath": "staticwebassets/BlazorTest.bundle.scp.css"
+      "Id": "/Users/atridad/Developer/GitHub/blazor-test/obj/Debug/net8.0/scopedcss/projectbundle/BlazeIt.bundle.scp.css",
+      "PackagePath": "staticwebassets/BlazeIt.bundle.scp.css"
     },
     {
       "Id": "/Users/atridad/Developer/GitHub/blazor-test/wwwroot/app.css",
@@ -21,20 +21,20 @@
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BlazorTest.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BlazeIt.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BlazorTest.props",
-      "PackagePath": "build\\BlazorTest.props"
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BlazeIt.props",
+      "PackagePath": "build\\BlazeIt.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BlazorTest.props",
-      "PackagePath": "buildMultiTargeting\\BlazorTest.props"
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BlazeIt.props",
+      "PackagePath": "buildMultiTargeting\\BlazeIt.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BlazorTest.props",
-      "PackagePath": "buildTransitive\\BlazorTest.props"
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BlazeIt.props",
+      "PackagePath": "buildTransitive\\BlazeIt.props"
     }
   ],
   "ElementsToRemove": []

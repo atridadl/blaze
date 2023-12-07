@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/atridad/Developer/GitHub/blazor-test/BlazorTest.csproj",
-      "projectName": "BlazorTest",
-      "projectPath": "/Users/atridad/Developer/GitHub/blazor-test/BlazorTest.csproj",
+      "projectUniqueName": "/Users/atridad/Developer/GitHub/blazor-test/BlazeIt.csproj",
+      "projectName": "BlazeIt",
+      "projectPath": "/Users/atridad/Developer/GitHub/blazor-test/BlazeIt.csproj",
       "packagesPath": "/Users/atridad/.nuget/packages/",
       "outputPath": "/Users/atridad/Developer/GitHub/blazor-test/obj/",
       "projectStyle": "PackageReference",
