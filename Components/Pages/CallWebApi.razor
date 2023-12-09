@@ -3,25 +3,25 @@
 @using System.Text.Json.Serialization
 @inject IHttpClientFactory ClientFactory
 
-<h1>Call web API from a Blazor Server Razor component</h1>
+<h1>Call web API from a Blazor Server Razor component... like some Pokemon!</h1>
 
-@if (getBranchesError || branches is null)
+@if (getPokemonError || pokemon is null)
 {
-    <p>Unable to get branches from GitHub. Please try again later.</p>
+    <p>Unable to get Pokemon. Please try again later.</p>
 }
 else
 {
     <ul>
-    @foreach (var branch in branches)
+    @foreach (var mon in pokemon.Results)
         {
-            <li>@branch.Name</li>
+            <li>@mon.Name</li>
         }
     </ul>
 }
 
 @code {
-    private IEnumerable<GitHubBranch>? branches = Array.Empty<GitHubBranch>();
-    private bool getBranchesError;
+    private PokemonApi? pokemon;
+    private bool getPokemonError;
     private bool shouldRender;
 
     protected override bool ShouldRender() => shouldRender;
@@ -29,7 +29,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         var request = new HttpRequestMessage(HttpMethod.Get,
-        "https://api.github.com/repos/dotnet/AspNetCore.Docs/branches");
+        "https://pokeapi.co/api/v2/pokemon");
         request.Headers.Add("Accept", "application/vnd.github.v3+json");
         request.Headers.Add("User-Agent", "HttpClientFactory-Sample");
 
@@ -40,20 +40,27 @@ else
         if (response.IsSuccessStatusCode)
         {
             using var responseStream = await response.Content.ReadAsStreamAsync();
-            branches = await JsonSerializer.DeserializeAsync
-            <IEnumerable<GitHubBranch>>(responseStream);
+            pokemon = await JsonSerializer.DeserializeAsync
+            <PokemonApi>(responseStream);
         }
         else
         {
-            getBranchesError = true;
+            getPokemonError = true;
         }
 
         shouldRender = true;
     }
 
-    public class GitHubBranch
+    public class Pokemon
     {
         [JsonPropertyName("name")]
-        public string? Name { get; set; }
+
+        public string Name { get; set; }
+    }
+
+    public class PokemonApi
+    {
+        [JsonPropertyName("results")]
+        public IEnumerable<Pokemon> Results { get; set; }
     }
 }
