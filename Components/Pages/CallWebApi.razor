@@ -5,7 +5,7 @@
 
 <h1>Call web API from a Blazor Server Razor component... like some Pokemon!</h1>
 
-@if (getPokemonError || pokemon is null)
+@if (getPokemonError || pokemon is null || pokemon.Results is null)
 {
     <p>Unable to get Pokemon. Please try again later.</p>
 }
@@ -55,12 +55,12 @@ else
     {
         [JsonPropertyName("name")]
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 
     public class PokemonApi
     {
         [JsonPropertyName("results")]
-        public IEnumerable<Pokemon> Results { get; set; }
+        public IEnumerable<Pokemon>? Results { get; set; }
     }
 }
