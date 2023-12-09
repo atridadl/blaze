@@ -2,12 +2,18 @@
 @using System.Text.Json
 @using System.Text.Json.Serialization
 @inject IHttpClientFactory ClientFactory
+@attribute [StreamRendering]
 
 <h1>Call web API from a Blazor Server Razor component... like some Pokemon!</h1>
 
-@if (getPokemonError || pokemon is null || pokemon.Results is null)
+@if (getPokemonError)
 {
     <p>Unable to get Pokemon. Please try again later.</p>
+}
+else if (pokemon is null || pokemon.Results is null)
+{
+    <span class="loading loading-spinner text-secondary loading-lg"></span>
+
 }
 else
 {
@@ -22,12 +28,10 @@ else
 @code {
     private PokemonApi? pokemon;
     private bool getPokemonError;
-    private bool shouldRender;
-
-    protected override bool ShouldRender() => shouldRender;
-
     protected override async Task OnInitializedAsync()
     {
+        @* Remove this next line!!!!! *@
+        await Task.Delay(500);
         var request = new HttpRequestMessage(HttpMethod.Get,
         "https://pokeapi.co/api/v2/pokemon");
         request.Headers.Add("Accept", "application/vnd.github.v3+json");
@@ -47,8 +51,6 @@ else
         {
             getPokemonError = true;
         }
-
-        shouldRender = true;
     }
 
     public class Pokemon
