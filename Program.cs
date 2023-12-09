@@ -1,4 +1,4 @@
-using BlazeIt.Components;
+using Blaze.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
